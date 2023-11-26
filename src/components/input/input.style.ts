@@ -26,5 +26,5 @@ export const Label = styled.Text`
 	color: ${tema.cores.temaVerde.verdePrincipal};
 	background-color: ${tema.cores.temaNeutro.branco};
 	left: 80px;
-	top: 8px;
+	top: 2px;
 `;
