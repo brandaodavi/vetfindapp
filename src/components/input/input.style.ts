@@ -22,7 +22,8 @@ export const InputBox = styled.TextInput`
 export const Label = styled.Text`
 	position: absolute;
 	padding: 0 4px 0 2px;
-	font-size: 18;
+	font-size: 18px;
+	font-family: "Poppins-Regular";
 	color: ${tema.cores.temaVerde.verdePrincipal};
 	background-color: ${tema.cores.temaNeutro.branco};
 	left: 80px;
