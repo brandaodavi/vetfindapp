@@ -3,7 +3,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import Input from "./src/components/input/Input";
+import Login from "./src/screens/index";
+
 export default function App() {
 	const [fontsLoaded] = useFonts({
 		"Poppins-Black": require("./assets/fonts/Poppins-Black.ttf"),
@@ -31,7 +32,7 @@ export default function App() {
 
 	return (
 		<SafeAreaView>
-			<Input label="Usuário" placeholder="Insira o usuário"></Input>
+			<Login></Login>
 		</SafeAreaView>
 	);
 }

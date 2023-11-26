@@ -1,5 +1,6 @@
 import { TextInputProps } from "react-native";
 
+import { tema } from "../themes/tema";
 import { InputBox, InputContainer, Label } from "./input.style";
 
 interface InputProps extends TextInputProps {
@@ -10,7 +11,11 @@ interface InputProps extends TextInputProps {
 const Input = ({ label, placeholder, ...props }: InputProps) => {
 	return (
 		<InputContainer>
-			<InputBox placeholder={placeholder} {...props}></InputBox>
+			<InputBox
+				placeholder={placeholder}
+				placeholderTextColor={tema.cores.temaVerde.verdePrincipal}
+				{...props}
+			></InputBox>
 			<Label>{label}</Label>
 		</InputContainer>
 	);

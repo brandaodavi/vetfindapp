@@ -9,7 +9,7 @@ export const InputContainer = styled.View`
 `;
 
 export const InputBox = styled.TextInput`
-	width: 300px;
+	width: 250px;
 	height: 70px;
 	background-color: ${tema.cores.temaNeutro.branco};
 	border: none;
@@ -26,6 +26,6 @@ export const Label = styled.Text`
 	font-family: "Poppins-Regular";
 	color: ${tema.cores.temaVerde.verdePrincipal};
 	background-color: ${tema.cores.temaNeutro.branco};
-	left: 80px;
-	top: 2px;
+	left: 100px;
+	top: 5px;
 `;
