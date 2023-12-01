@@ -23,12 +23,12 @@ export const ButtonSecondary = styled(ButtonPrimary)<ButtonContainerProps>`
 `;
 
 export const ButtonTerciary = styled(ButtonPrimary)<ButtonContainerProps>`
-	${(props: { margin: any }) => (props.margin ? `margin: ${props.margin}` : "")}
+	${(props: { margin: any }) => (props.margin ? `margin: ${props.margin};` : "")}
 	background-color: ${tema.cores.temaVerde.verdeClaro2};
 `;
 
 export const ButtonDisabled = styled(ButtonPrimary)<ButtonContainerProps>`
-	${(props: { margin: any }) => (props.margin ? `margin: ${props.margin}` : "")}
+	${(props: { margin: any }) => (props.margin ? `margin: ${props.margin};` : "")}
 	background-color: ${tema.cores.temaNeutro.cinza};
 `;
 

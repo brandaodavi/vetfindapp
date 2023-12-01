@@ -1,9 +1,8 @@
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 
-import Login from "./src/screens/index";
+import Routes from "./src/routes";
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
@@ -30,9 +29,5 @@ export default function App() {
 		SplashScreen.hideAsync();
 	}
 
-	return (
-		<SafeAreaView>
-			<Login></Login>
-		</SafeAreaView>
-	);
+	return <Routes />;
 }
