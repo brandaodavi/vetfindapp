@@ -1,8 +1,8 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { tema, textTypes } from "../components";
-import { Cadastro, Inicio, Login, Menu, Perfil, Pesquisa } from "../screens/index";
+import { tema } from "../components";
+import { Inicio, Menu, Perfil, Pesquisa } from "../screens/index";
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +24,7 @@ export default function TabRoutes() {
 				},
 			}}
 		>
-			<Tab.Screen
+			{/* <Tab.Screen
 				name="Login"
 				component={Login}
 				options={{
@@ -47,7 +47,7 @@ export default function TabRoutes() {
 						(<FontAwesome name="map" color={corIcone} size={size} />)
 					),
 				}}
-			/>
+			/> */}
 			<Tab.Screen
 				name="Menu"
 				component={Menu}

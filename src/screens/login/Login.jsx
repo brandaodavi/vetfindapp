@@ -32,7 +32,7 @@ const Login = () => {
 						margin="50px auto"
 						title="Entrar"
 						onPress={() => {
-							navigation.navigate("Inicio");
+							navigation.navigate("TabBar");
 						}}
 					/>
 				</KeyboardAvoidingView>
