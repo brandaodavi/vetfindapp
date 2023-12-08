@@ -19,7 +19,7 @@ const CadastroCliente = ({ navigation }) => {
 	return (
 		<Container>
 			<KeyboardAvoidingView behavior="position">
-				<PerfilHeader title="Perfil Cliente" icon="user-circle" size={100}></PerfilHeader>
+				<PerfilHeader title="Perfil Cliente" icon="user-circle" size={80}></PerfilHeader>
 				<Input label="Nome" placeholder="Insira o seu nome" value={nome} onChangeText={setNome} />
 				<Input
 					label="E-mail"
@@ -36,7 +36,7 @@ const CadastroCliente = ({ navigation }) => {
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="100px auto 0px auto" title="Continuar" onPress={validarDados} />
+			<Button margin="150px auto 0px auto" title="Continuar" onPress={validarDados} />
 		</Container>
 	);
 };

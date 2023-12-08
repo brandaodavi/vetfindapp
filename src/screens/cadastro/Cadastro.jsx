@@ -18,7 +18,7 @@ const Cadastro = ({ navigation }) => {
 				size={50}
 			></TipoPerfil>
 			<TipoPerfil
-				onPress={() => navigation.navigate("CadastroCliente")}
+				onPress={() => navigation.navigate("CadastroFreelancer")}
 				title="Freelancer"
 				icon="user-alt"
 				size={50}

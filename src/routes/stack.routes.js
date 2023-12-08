@@ -1,7 +1,14 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { tema } from "../components";
-import { Cadastro, CadastroCliente, CadastroProprietario, Login } from "../screens";
+import {
+	Cadastro,
+	CadastroCliente,
+	CadastroFreelancer,
+	CadastroProprietario,
+	CadastroVeterinario,
+	Login,
+} from "../screens";
 import TabRoutes from "./tab.routes";
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +50,28 @@ export default function StackRoutes() {
 			<Stack.Screen
 				name="CadastroProprietario"
 				component={CadastroProprietario}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroFreelancer"
+				component={CadastroFreelancer}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroVeterinario"
+				component={CadastroVeterinario}
 				options={{
 					headerTitle: "",
 					headerStyle: {
