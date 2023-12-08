@@ -1,8 +1,8 @@
-import { Button, Container, Text, textTypes, TipoPerfil } from "../../components";
+import { Container, Text, textTypes, TipoPerfil } from "../../components";
 const Cadastro = ({ navigation }) => {
 	return (
 		<Container>
-			<Text margin="0 auto 80px auto" type={textTypes.TITLE_REGULAR}>
+			<Text margin="100px auto" type={textTypes.TITLE_REGULAR}>
 				Qual seu tipo de perfil?
 			</Text>
 			<TipoPerfil
@@ -23,7 +23,6 @@ const Cadastro = ({ navigation }) => {
 				icon="user-alt"
 				size={50}
 			></TipoPerfil>
-			<Button margin="50px auto" title="Continuar" />
 		</Container>
 	);
 };

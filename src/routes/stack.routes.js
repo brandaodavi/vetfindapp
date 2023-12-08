@@ -26,6 +26,7 @@ export default function StackRoutes() {
 					headerStyle: {
 						backgroundColor: "#FFFFFF",
 					},
+					headerTransparent: true,
 				}}
 			/>
 			<Stack.Screen
@@ -36,6 +37,7 @@ export default function StackRoutes() {
 					headerStyle: {
 						backgroundColor: "#FFFFFF",
 					},
+					headerTransparent: true,
 				}}
 			/>
 		</Stack.Navigator>
