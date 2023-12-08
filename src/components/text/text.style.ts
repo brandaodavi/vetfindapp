@@ -23,5 +23,4 @@ export const ContainerText = styled.Text<ContainerTextProps>`
 	font-size: ${(props: { fontSize: any }) => props.fontSize};
 	font-family: ${(props: { fontFamily: any }) => props.fontFamily};
 	${(props: { margin: any }) => (props.margin ? `margin: ${props.margin}` : "")};
-	z-index: 999;
 `;

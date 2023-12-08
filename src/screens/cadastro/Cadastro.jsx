@@ -12,13 +12,13 @@ const Cadastro = ({ navigation }) => {
 				size={50}
 			></TipoPerfil>
 			<TipoPerfil
-				onPress={() => console.log("Proprietário")}
+				onPress={() => navigation.navigate("CadastroProprietario")}
 				title="Proprietário"
 				icon="store-alt"
 				size={50}
 			></TipoPerfil>
 			<TipoPerfil
-				onPress={() => console.log("Freelancer")}
+				onPress={() => navigation.navigate("CadastroCliente")}
 				title="Freelancer"
 				icon="user-alt"
 				size={50}
