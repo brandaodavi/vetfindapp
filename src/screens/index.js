@@ -3,6 +3,7 @@ import CadastroCliente from "./cadastro-cliente/CadastroCliente";
 import CadastroFreelancer from "./cadastro-freelancer/CadastroFreelancer";
 import CadastroProprietario from "./cadastro-proprietario/CadastroProprietario";
 import CadastroVeterinario from "./cadastro-veterinario/CadastroVeterinario";
+import CadastroVeterinario2 from "./cadastro-veterinario/CadastroVeterinario2";
 import Inicio from "./inicio/Inicio";
 import Login from "./login/Login";
 import Menu from "./menu/Menu";
@@ -15,6 +16,7 @@ export {
 	CadastroFreelancer,
 	CadastroProprietario,
 	CadastroVeterinario,
+	CadastroVeterinario2,
 	Inicio,
 	Login,
 	Menu,

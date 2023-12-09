@@ -7,6 +7,7 @@ import {
 	CadastroFreelancer,
 	CadastroProprietario,
 	CadastroVeterinario,
+	CadastroVeterinario2,
 	Login,
 } from "../screens";
 import TabRoutes from "./tab.routes";
@@ -72,6 +73,17 @@ export default function StackRoutes() {
 			<Stack.Screen
 				name="CadastroVeterinario"
 				component={CadastroVeterinario}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroVeterinario2"
+				component={CadastroVeterinario2}
 				options={{
 					headerTitle: "",
 					headerStyle: {
