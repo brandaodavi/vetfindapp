@@ -2,19 +2,17 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, PerfilHeader } from "../../components";
+import { checarCampos } from "../../functions/checarCampos";
 
 const CadastroCliente = ({ navigation }) => {
 	const [nome, setNome] = useState(null);
 	const [email, setEmail] = useState(null);
 	const [cep, setCep] = useState(null);
 
-	const validarDados = () => {
-		if (nome === null || email === null || cep === null) {
-			console.log("Campos inseridos incorretamente");
-			return;
-		}
-
-		navigation.navigate("Login");
+	const encaminharCampos = () => {
+		checarCampos(nome, email, cep)
+			? navigation.navigate("Login")
+			: "";
 	};
 	return (
 		<Container>
@@ -36,7 +34,7 @@ const CadastroCliente = ({ navigation }) => {
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="150px auto 0px auto" title="Continuar" onPress={validarDados} />
+			<Button margin="150px auto 0px auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

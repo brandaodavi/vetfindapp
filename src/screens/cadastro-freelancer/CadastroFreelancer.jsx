@@ -13,7 +13,7 @@ const CadastroFreelancer = ({ navigation }) => {
 				size={50}
 			></TipoPerfil>
 			<TipoPerfil
-				onPress={() => navigation.navigate("Login")}
+				onPress={() => navigation.navigate("CadastroCuidador")}
 				title="Cuidador"
 				icon="house-user"
 				size={50}

@@ -1,4 +1,4 @@
-export const validarDados = (...dados) => {
+export const checarCampos = (...dados) => {
 	let camposVazios = 0;
 
 	dados.forEach((dado) => {

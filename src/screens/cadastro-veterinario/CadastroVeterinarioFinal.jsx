@@ -2,16 +2,16 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, Text, textTypes } from "../../components";
-import { validarDados } from "../../functions/validarDados";
+import { checarCampos } from "../../functions/checarCampos";
 
-const CadastroVeterinario2 = ({ navigation }) => {
+const CadastroVeterinarioFinal = ({ navigation }) => {
 	const [email, setEmail] = useState(null);
 	const [emailConfirmado, setEmailConfirmado] = useState(null);
 	const [senha, setSenha] = useState(null);
 	const [senhaConfirmada, setSenhaConfirmada] = useState(null);
 
-	const encaminharDados = () => {
-		validarDados(email, emailConfirmado, senha, senhaConfirmada)
+	const encaminharCampos = () => {
+		checarCampos(email, emailConfirmado, senha, senhaConfirmada)
 			? navigation.navigate("Login")
 			: "";
 	};
@@ -51,9 +51,9 @@ const CadastroVeterinario2 = ({ navigation }) => {
 					secureTextEntry={true}
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="60px auto 0 auto" title="Cadastrar" onPress={encaminharDados} />
+			<Button margin="60px auto 0 auto" title="Cadastrar" onPress={encaminharCampos} />
 		</Container>
 	);
 };
 
-export default CadastroVeterinario2;
+export default CadastroVeterinarioFinal;

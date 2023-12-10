@@ -2,6 +2,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, PerfilHeader } from "../../components";
+import { checarCampos } from "../../functions/checarCampos";
 
 const CadastroVeterinario = ({ navigation }) => {
 	const [nome, setNome] = useState(null);
@@ -9,18 +10,13 @@ const CadastroVeterinario = ({ navigation }) => {
 	const [uf, setUf] = useState(null);
 	const [telefone, setTelefone] = useState(null);
 
-	const validarDados = () => {
-		if (nome === null || telefone === null || crmv === null || uf === null) {
-			console.log("Campos inseridos incorretamente");
-			return;
-		}
-
-		navigation.navigate("CadastroVeterinario2");
+	const encaminharCampos = () => {
+		checarCampos(nome, crmv, uf, telefone) ? navigation.navigate("CadastroVeterinarioFinal") : "";
 	};
 	return (
 		<Container>
 			<KeyboardAvoidingView behavior="position">
-				<PerfilHeader title="Veterinário Freelancer" icon="user-md" size={80}></PerfilHeader>
+				<PerfilHeader title="Veterinário Freelancer" icon="user-md" size={80} />
 				<Input
 					label="Nome"
 					placeholder="Insira o seu nome"
@@ -50,7 +46,7 @@ const CadastroVeterinario = ({ navigation }) => {
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="40px auto 0px auto" title="Continuar" onPress={validarDados} />
+			<Button margin="40px auto 0px auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

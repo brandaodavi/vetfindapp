@@ -4,10 +4,12 @@ import { tema } from "../components";
 import {
 	Cadastro,
 	CadastroCliente,
+	CadastroCuidador,
+	CadastroCuidadorFinal,
 	CadastroFreelancer,
 	CadastroProprietario,
 	CadastroVeterinario,
-	CadastroVeterinario2,
+	CadastroVeterinarioFinal,
 	Login,
 } from "../screens";
 import TabRoutes from "./tab.routes";
@@ -82,8 +84,30 @@ export default function StackRoutes() {
 				}}
 			/>
 			<Stack.Screen
-				name="CadastroVeterinario2"
-				component={CadastroVeterinario2}
+				name="CadastroVeterinarioFinal"
+				component={CadastroVeterinarioFinal}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroCuidador"
+				component={CadastroCuidador}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroCuidadorFinal"
+				component={CadastroCuidadorFinal}
 				options={{
 					headerTitle: "",
 					headerStyle: {
