@@ -49,18 +49,6 @@ export default function TabRoutes() {
 				}}
 			/> */}
 			<Tab.Screen
-				name="Menu"
-				component={Menu}
-				options={{
-					tabBarIcon: ({ size, focused }) => (
-						focused
-							? (corIcone = tema.cores.temaCiano.ciano)
-							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="bars" color={corIcone} size={size} />)
-					),
-				}}
-			/>
-			<Tab.Screen
 				name="Inicio"
 				component={Inicio}
 				options={{
@@ -81,6 +69,18 @@ export default function TabRoutes() {
 							? (corIcone = tema.cores.temaCiano.ciano)
 							: (corIcone = tema.cores.temaNeutro.branco),
 						(<FontAwesome name="search" color={corIcone} size={size} />)
+					),
+				}}
+			/>
+			<Tab.Screen
+				name="Menu"
+				component={Menu}
+				options={{
+					tabBarIcon: ({ size, focused }) => (
+						focused
+							? (corIcone = tema.cores.temaCiano.ciano)
+							: (corIcone = tema.cores.temaNeutro.branco),
+						(<FontAwesome name="bars" color={corIcone} size={size} />)
 					),
 				}}
 			/>

@@ -6,7 +6,7 @@ import CadastroFreelancer from "./cadastro-freelancer/CadastroFreelancer";
 import CadastroProprietario from "./cadastro-proprietario/CadastroProprietario";
 import CadastroVeterinario from "./cadastro-veterinario/CadastroVeterinario";
 import CadastroVeterinarioFinal from "./cadastro-veterinario/CadastroVeterinarioFinal";
-import Inicio from "./inicio/Inicio";
+import Inicio from "./inicio-cliente/Inicio";
 import Login from "./login/Login";
 import Menu from "./menu/Menu";
 import Perfil from "./perfil/Perfil";
