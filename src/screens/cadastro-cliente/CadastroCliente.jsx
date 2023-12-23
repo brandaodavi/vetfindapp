@@ -10,9 +10,7 @@ const CadastroCliente = ({ navigation }) => {
 	const [cep, setCep] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(nome, email, cep)
-			? navigation.navigate("Login")
-			: "";
+		checarCampos(nome, email, cep) ? navigation.navigate("Login") : "";
 	};
 	return (
 		<Container>
@@ -34,7 +32,7 @@ const CadastroCliente = ({ navigation }) => {
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="150px auto 0px auto" title="Continuar" onPress={encaminharCampos} />
+			<Button margin="35% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

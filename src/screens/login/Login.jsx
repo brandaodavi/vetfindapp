@@ -27,8 +27,8 @@ const Login = ({ navigation }) => {
 					height: 100,
 					marginLeft: "auto",
 					marginRight: "auto",
-					marginTop: 20,
-					marginBottom: 150,
+					marginTop: "10%",
+					marginBottom: "30%",
 				}}
 				source={require("../../../assets/img/logo.png")}
 			/>
@@ -50,9 +50,9 @@ const Login = ({ navigation }) => {
 				<Text margin="auto" onPress={() => console.log(senha)}>
 					Esqueci a minha senha
 				</Text>
-				<Button margin="40px auto" title="Entrar" onPress={autorizarLogin} />
+				<Button margin="10% auto" title="Entrar" onPress={autorizarLogin} />
 			</KeyboardAvoidingView>
-			<Text margin="50px auto 5px auto" type={textTypes.SMALL_BOLD}>
+			<Text margin="30% auto 1% auto" type={textTypes.SMALL_BOLD}>
 				Não possui conta no VetFind?
 			</Text>
 			<Text

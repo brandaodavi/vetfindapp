@@ -7,7 +7,7 @@ interface ButtonContainerProps {
 }
 
 export const ButtonPrimary = styled.TouchableOpacity<ButtonContainerProps>`
-	width: 175px;
+	width: 43%;
 	height: 40px;
 	border-radius: 4px;
 	flex-direction: row;

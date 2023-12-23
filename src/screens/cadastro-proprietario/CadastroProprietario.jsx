@@ -38,7 +38,7 @@ const CadastroProprietario = ({ navigation }) => {
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="150px auto 0px auto" title="Continuar" onPress={encaminharCampos} />
+			<Button margin="35% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

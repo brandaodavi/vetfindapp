@@ -2,7 +2,7 @@ import { Container, Text, textTypes, TipoPerfil } from "../../components";
 const Cadastro = ({ navigation }) => {
 	return (
 		<Container>
-			<Text margin="100px auto" type={textTypes.TITLE_REGULAR}>
+			<Text margin="25% auto" type={textTypes.TITLE_REGULAR}>
 				Qual seu tipo de perfil?
 			</Text>
 			<TipoPerfil

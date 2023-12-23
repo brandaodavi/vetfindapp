@@ -47,7 +47,7 @@ const CadastroCuidador = ({ navigation }) => {
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="40px auto 0 auto" title="Continuar" onPress={encaminharCampos} />
+			<Button margin="10% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

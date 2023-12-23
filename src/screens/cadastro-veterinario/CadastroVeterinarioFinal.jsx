@@ -51,7 +51,7 @@ const CadastroVeterinarioFinal = ({ navigation }) => {
 					secureTextEntry={true}
 				/>
 			</KeyboardAvoidingView>
-			<Button margin="60px auto 0 auto" title="Cadastrar" onPress={encaminharCampos} />
+			<Button margin="30% auto 0 auto" title="Cadastrar" onPress={encaminharCampos} />
 		</Container>
 	);
 };
