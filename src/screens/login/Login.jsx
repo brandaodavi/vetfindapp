@@ -53,7 +53,7 @@ const Login = ({ navigation }) => {
 				<Button margin="40px auto" title="Entrar" onPress={autorizarLogin} />
 			</KeyboardAvoidingView>
 			<Text margin="50px auto 5px auto" type={textTypes.SMALL_BOLD}>
-				Não possui conta no VetFind?
+				Não possui conta no VetFind???
 			</Text>
 			<Text
 				margin="0 auto"
