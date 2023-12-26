@@ -5,13 +5,13 @@ import { Button, Container, Input, Text, textTypes } from "../../components";
 import { checarCampos, checarCamposIguais } from "../../functions";
 
 const CadastroClienteFinal = ({ navigation }) => {
-	const [email, setEmail] = useState(null);
+	const [emailCliente, setEmailCliente] = useState(null);
 	const [emailConfirmado, setEmailConfirmado] = useState(null);
-	const [senha, setSenha] = useState(null);
+	const [senhaCliente, setSenhaCliente] = useState(null);
 	const [senhaConfirmada, setSenhaConfirmada] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(email, emailConfirmado, senha, senhaConfirmada) && checarCamposIguais(email, emailConfirmado) && checarCamposIguais(senha, senhaConfirmada)
+		checarCampos(emailCliente, emailConfirmado, senhaCliente, senhaConfirmada) && checarCamposIguais(emailCliente, emailConfirmado) && checarCamposIguais(senhaCliente, senhaConfirmada)
 			? navigation.navigate("TabBar")
 			: "";
 	};
@@ -25,8 +25,8 @@ const CadastroClienteFinal = ({ navigation }) => {
 				<Input
 					label="E-mail"
 					placeholder="Insira o seu e-mail"
-					value={email}
-					onChangeText={setEmail}
+					value={emailCliente}
+					onChangeText={setEmailCliente}
 					keyboardType="email-address"
 				/>
 				<Input
@@ -39,8 +39,8 @@ const CadastroClienteFinal = ({ navigation }) => {
 				<Input
 					label="Senha"
 					placeholder="Insira a sua senha"
-					value={senha}
-					onChangeText={setSenha}
+					value={senhaCliente}
+					onChangeText={setSenhaCliente}
 					secureTextEntry={true}
 				/>
 				<Input

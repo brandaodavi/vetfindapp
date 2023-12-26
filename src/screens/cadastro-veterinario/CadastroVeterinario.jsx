@@ -5,13 +5,13 @@ import { Button, Container, Input, PerfilHeader } from "../../components";
 import { checarCampos } from "../../functions";
 
 const CadastroVeterinario = ({ navigation }) => {
-	const [nome, setNome] = useState(null);
+	const [nomeVeterinario, setNomeVeterinario] = useState(null);
 	const [crmv, setCrmv] = useState(null);
 	const [uf, setUf] = useState(null);
-	const [telefone, setTelefone] = useState(null);
+	const [telefoneVeterinario, setTelefoneVeterinario] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(nome, crmv, uf, telefone) ? navigation.navigate("CadastroVeterinarioFinal") : "";
+		checarCampos(nomeVeterinario, crmv, uf, telefoneVeterinario) ? navigation.navigate("CadastroVeterinarioFinal") : "";
 	};
 	return (
 		<Container>
@@ -20,8 +20,8 @@ const CadastroVeterinario = ({ navigation }) => {
 				<Input
 					label="Nome"
 					placeholder="Insira o seu nome"
-					value={nome}
-					onChangeText={setNome}
+					value={nomeVeterinario}
+					onChangeText={setNomeVeterinario}
 					keyboardType="default"
 				/>
 				<Input
@@ -41,8 +41,8 @@ const CadastroVeterinario = ({ navigation }) => {
 				<Input
 					label="Telefone"
 					placeholder="Insira o seu telefone"
-					value={telefone}
-					onChangeText={setTelefone}
+					value={telefoneVeterinario}
+					onChangeText={setTelefoneVeterinario}
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
