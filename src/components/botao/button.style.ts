@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-import { tema } from "../themes/tema";
+import { tema } from "../index";
 
 interface ButtonContainerProps {
 	margin?: string;

@@ -15,7 +15,7 @@ export default function TabRoutes() {
 				tabBarInactiveTintColor: `${tema.cores.temaNeutro.branco}`,
 				headerShown: false,
 				tabBarStyle: {
-					height: "100%",
+					height: 60,
 				},
 				tabBarActiveBackgroundColor: `${tema.cores.temaVerde.verdePrincipal}`,
 				tabBarInactiveBackgroundColor: `${tema.cores.temaVerde.verdePrincipal}`,
