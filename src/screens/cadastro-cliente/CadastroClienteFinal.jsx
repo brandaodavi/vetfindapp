@@ -2,17 +2,17 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, Text, textTypes } from "../../components";
-import { checarCampos } from "../../functions";
+import { checarCampos, checarCamposIguais } from "../../functions";
 
-const CadastroVeterinarioFinal = ({ navigation }) => {
+const CadastroClienteFinal = ({ navigation }) => {
 	const [email, setEmail] = useState(null);
 	const [emailConfirmado, setEmailConfirmado] = useState(null);
 	const [senha, setSenha] = useState(null);
 	const [senhaConfirmada, setSenhaConfirmada] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(email, emailConfirmado, senha, senhaConfirmada)
-			? navigation.navigate("Login")
+		checarCampos(email, emailConfirmado, senha, senhaConfirmada) && checarCamposIguais(email, emailConfirmado) && checarCamposIguais(senha, senhaConfirmada)
+			? navigation.navigate("TabBar")
 			: "";
 	};
 
@@ -56,4 +56,4 @@ const CadastroVeterinarioFinal = ({ navigation }) => {
 	);
 };
 
-export default CadastroVeterinarioFinal;
+export default CadastroClienteFinal;

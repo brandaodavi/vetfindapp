@@ -2,7 +2,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, Text, textTypes } from "../../components";
-import { checarCampos } from "../../functions/checarCampos";
+import { checarCampos } from "../../functions";
 
 const CadastroCuidadorFinal = ({ navigation }) => {
 	const [email, setEmail] = useState(null);

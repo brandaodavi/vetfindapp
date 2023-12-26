@@ -2,33 +2,40 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, PerfilHeader } from "../../components";
-import { checarCampos } from "../../functions/checarCampos";
+import { checarCampos } from "../../functions";
 
 const CadastroCliente = ({ navigation }) => {
-	const [nome, setNome] = useState(null);
-	const [email, setEmail] = useState(null);
-	const [cep, setCep] = useState(null);
+	const [nomeCliente, setNomeCliente] = useState(null);
+	const [emailCliente, setEmailCliente] = useState(null);
+	const [cepCliente, setCepCliente] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(nome, email, cep) ? navigation.navigate("Login") : "";
+		checarCampos(nomeCliente, emailCliente, cepCliente)
+			? navigation.navigate("CadastroClienteFinal")
+			: "";
 	};
 	return (
 		<Container>
 			<KeyboardAvoidingView behavior="position">
 				<PerfilHeader title="Perfil Cliente" icon="user-circle" size={80}></PerfilHeader>
-				<Input label="Nome" placeholder="Insira o seu nome" value={nome} onChangeText={setNome} />
+				<Input
+					label="Nome"
+					placeholder="Insira o seu nome"
+					value={nomeCliente}
+					onChangeText={setNomeCliente}
+				/>
 				<Input
 					label="E-mail"
 					placeholder="Insira o seu e-mail"
-					value={email}
-					onChangeText={setEmail}
+					value={emailCliente}
+					onChangeText={setEmailCliente}
 					keyboardType="email-address"
 				/>
 				<Input
 					label="CEP"
 					placeholder="Insira o seu CEP"
-					value={cep}
-					onChangeText={setCep}
+					value={cepCliente}
+					onChangeText={setCepCliente}
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>

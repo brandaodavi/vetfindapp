@@ -4,6 +4,7 @@ import { tema } from "../components";
 import {
 	Cadastro,
 	CadastroCliente,
+	CadastroClienteFinal,
 	CadastroCuidador,
 	CadastroCuidadorFinal,
 	CadastroFreelancer,
@@ -42,6 +43,17 @@ export default function StackRoutes() {
 			<Stack.Screen
 				name="CadastroCliente"
 				component={CadastroCliente}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroClienteFinal"
+				component={CadastroClienteFinal}
 				options={{
 					headerTitle: "",
 					headerStyle: {

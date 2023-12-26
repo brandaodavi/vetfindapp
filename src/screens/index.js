@@ -1,5 +1,6 @@
 import Cadastro from "./cadastro/Cadastro";
 import CadastroCliente from "./cadastro-cliente/CadastroCliente";
+import CadastroClienteFinal from "./cadastro-cliente/CadastroClienteFinal";
 import CadastroCuidador from "./cadastro-cuidador/CadastroCuidador";
 import CadastroCuidadorFinal from "./cadastro-cuidador/CadastroCuidadorFinal";
 import CadastroFreelancer from "./cadastro-freelancer/CadastroFreelancer";
@@ -15,6 +16,7 @@ import Pesquisa from "./pesquisa/Pesquisa";
 export {
 	Cadastro,
 	CadastroCliente,
+	CadastroClienteFinal,
 	CadastroCuidador,
 	CadastroCuidadorFinal,
 	CadastroFreelancer,

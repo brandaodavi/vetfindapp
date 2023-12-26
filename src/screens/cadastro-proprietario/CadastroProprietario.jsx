@@ -2,7 +2,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, PerfilHeader } from "../../components";
-import { checarCampos } from "../../functions/checarCampos";
+import { checarCampos } from "../../functions";
 
 const CadastroProprietario = ({ navigation }) => {
 	const [nome, setNome] = useState(null);
