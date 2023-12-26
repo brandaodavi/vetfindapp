@@ -1,15 +1,14 @@
 import { TouchableOpacityProps } from "react-native";
 
+import { Text, textTypes } from "../index";
+import { tema } from "../themes/tema";
 import {
 	ActivityButton,
 	ButtonDisabled,
 	ButtonPrimary,
 	ButtonSecondary,
 	ButtonTerciary,
-	tema,
-	Text,
-	textTypes,
-} from "../index";
+} from "./button.style";
 
 interface ButtonProps extends TouchableOpacityProps {
 	title: string;

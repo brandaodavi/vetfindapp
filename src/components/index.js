@@ -12,6 +12,7 @@ import { tema } from "./themes/tema";
 import TipoPerfil from "./tipo_perfil/TipoPerfil";
 import { ContainerPerfilHeader, ContainerTipo } from "./tipo_perfil/tipoPerfil.style";
 import PerfilHeader from "./tipo_perfil_titulo/PerfilHeader";
+
 export {
 	ActivityButton,
 	Button,

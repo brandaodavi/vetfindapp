@@ -5,13 +5,13 @@ import { Button, Container, Input, Text, textTypes } from "../../components";
 import { checarCampos } from "../../functions";
 
 const CadastroVeterinarioFinal = ({ navigation }) => {
-	const [emailVeterinario, setEmailVeterinario] = useState(null);
+	const [email, setEmail] = useState(null);
 	const [emailConfirmado, setEmailConfirmado] = useState(null);
-	const [senhaVeterinario, setSenhaVeterinario] = useState(null);
+	const [senha, setSenha] = useState(null);
 	const [senhaConfirmada, setSenhaConfirmada] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(emailVeterinario, emailConfirmado, senhaVeterinario, senhaConfirmada)
+		checarCampos(email, emailConfirmado, senha, senhaConfirmada)
 			? navigation.navigate("Login")
 			: "";
 	};
@@ -25,8 +25,8 @@ const CadastroVeterinarioFinal = ({ navigation }) => {
 				<Input
 					label="E-mail"
 					placeholder="Insira o seu e-mail"
-					value={emailVeterinario}
-					onChangeText={setEmailVeterinario}
+					value={email}
+					onChangeText={setEmail}
 					keyboardType="email-address"
 				/>
 				<Input
@@ -39,8 +39,8 @@ const CadastroVeterinarioFinal = ({ navigation }) => {
 				<Input
 					label="Senha"
 					placeholder="Insira a sua senha"
-					value={senhaVeterinario}
-					onChangeText={setSenhaVeterinario}
+					value={senha}
+					onChangeText={setSenha}
 					secureTextEntry={true}
 				/>
 				<Input

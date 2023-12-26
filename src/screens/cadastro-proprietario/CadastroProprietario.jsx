@@ -5,12 +5,12 @@ import { Button, Container, Input, PerfilHeader } from "../../components";
 import { checarCampos } from "../../functions";
 
 const CadastroProprietario = ({ navigation }) => {
-	const [nomeProprietario, setNomeProprietario] = useState(null);
-	const [emailProprietario, setEmailProprietario] = useState(null);
-	const [telefoneProprietario, setTelefoneProprietario] = useState(null);
+	const [nome, setNome] = useState(null);
+	const [email, setEmail] = useState(null);
+	const [telefone, setTelefone] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(nomeProprietario, emailProprietario, telefoneProprietario) ? navigation.navigate("Login") : "";
+		checarCampos(nome, email, telefone) ? navigation.navigate("Login") : "";
 	};
 	return (
 		<Container>
@@ -19,22 +19,22 @@ const CadastroProprietario = ({ navigation }) => {
 				<Input
 					label="Nome"
 					placeholder="Insira o seu nome"
-					value={nomeProprietario}
-					onChangeText={setNomeProprietario}
+					value={nome}
+					onChangeText={setNome}
 					keyboardType="default"
 				/>
 				<Input
 					label="E-mail"
 					placeholder="Insira o seu e-mail"
-					value={emailProprietario}
-					onChangeText={setEmailProprietario}
+					value={email}
+					onChangeText={setEmail}
 					keyboardType="email-address"
 				/>
 				<Input
 					label="Telefone"
 					placeholder="(99) 99999-9999"
-					value={telefoneProprietario}
-					onChangeText={setTelefoneProprietario}
+					value={telefone}
+					onChangeText={setTelefone}
 					keyboardType="numeric"
 				/>
 			</KeyboardAvoidingView>
