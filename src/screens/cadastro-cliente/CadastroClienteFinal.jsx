@@ -11,8 +11,10 @@ const CadastroClienteFinal = ({ navigation }) => {
 	const [senhaConfirmada, setSenhaConfirmada] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(email, emailConfirmado, senha, senhaConfirmada) && checarCamposIguais(email, emailConfirmado) && checarCamposIguais(senha, senhaConfirmada)
-			? navigation.navigate("TabBar")
+		checarCampos(email, emailConfirmado, senha, senhaConfirmada) &&
+		checarCamposIguais(email, emailConfirmado) &&
+		checarCamposIguais(senha, senhaConfirmada)
+			? navigation.navigate("Login")
 			: "";
 	};
 

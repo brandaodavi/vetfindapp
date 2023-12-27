@@ -7,6 +7,8 @@ import {
 	CadastroClienteFinal,
 	CadastroCuidador,
 	CadastroCuidadorFinal,
+	CadastroEstabelecimento,
+	CadastroEstabelecimento2,
 	CadastroFreelancer,
 	CadastroProprietario,
 	CadastroVeterinario,
@@ -65,6 +67,28 @@ export default function StackRoutes() {
 			<Stack.Screen
 				name="CadastroProprietario"
 				component={CadastroProprietario}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroEstabelecimento"
+				component={CadastroEstabelecimento}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroEstabelecimento2"
+				component={CadastroEstabelecimento2}
 				options={{
 					headerTitle: "",
 					headerStyle: {
