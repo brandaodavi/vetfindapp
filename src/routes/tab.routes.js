@@ -17,10 +17,14 @@ export default function TabRoutes() {
 				tabBarStyle: {
 					height: 60,
 				},
+				tabBarIconStyle: {
+					marginTop: 5,
+				},
 				tabBarActiveBackgroundColor: `${tema.cores.temaVerde.verdePrincipal}`,
 				tabBarInactiveBackgroundColor: `${tema.cores.temaVerde.verdePrincipal}`,
 				tabBarLabelStyle: {
 					fontSize: 14,
+					marginBottom: 2,
 				},
 			}}
 		>
@@ -52,11 +56,11 @@ export default function TabRoutes() {
 				name="Inicio"
 				component={Inicio}
 				options={{
-					tabBarIcon: ({ size, focused }) => (
+					tabBarIcon: ({ focused }) => (
 						focused
 							? (corIcone = tema.cores.temaCiano.ciano)
 							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="home" color={corIcone} size={size} />)
+						(<FontAwesome name="home" color={corIcone} size={35} />)
 					),
 				}}
 			/>
@@ -64,11 +68,11 @@ export default function TabRoutes() {
 				name="Pesquisa"
 				component={Pesquisa}
 				options={{
-					tabBarIcon: ({ size, focused }) => (
+					tabBarIcon: ({ focused }) => (
 						focused
 							? (corIcone = tema.cores.temaCiano.ciano)
 							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="search" color={corIcone} size={size} />)
+						(<FontAwesome name="search" color={corIcone} size={35} />)
 					),
 				}}
 			/>
@@ -76,11 +80,11 @@ export default function TabRoutes() {
 				name="Menu"
 				component={Menu}
 				options={{
-					tabBarIcon: ({ size, focused }) => (
+					tabBarIcon: ({ focused }) => (
 						focused
 							? (corIcone = tema.cores.temaCiano.ciano)
 							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="bars" color={corIcone} size={size} />)
+						(<FontAwesome name="bars" color={corIcone} size={35} />)
 					),
 				}}
 			/>
@@ -88,11 +92,11 @@ export default function TabRoutes() {
 				name="Perfil"
 				component={Perfil}
 				options={{
-					tabBarIcon: ({ size, focused }) => (
+					tabBarIcon: ({ focused }) => (
 						focused
 							? (corIcone = tema.cores.temaCiano.ciano)
 							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="user-circle" color={corIcone} size={size} />)
+						(<FontAwesome name="user-circle" color={corIcone} size={35} />)
 					),
 				}}
 			/>

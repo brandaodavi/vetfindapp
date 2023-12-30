@@ -1,8 +1,8 @@
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 import { useEffect, useRef, useState } from "react";
-import { StyleSheet } from "react-native";
-import MapView from "react-native-maps";
+import { Image } from "react-native";
+import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { Text } from "../../components";
@@ -15,35 +15,68 @@ const Inicio = () => {
 			const { status, permissions } = await Permissions.askAsync(Permissions.LOCATION);
 			if (status === "granted") {
 				let localizacao = await Location.getCurrentPositionAsync({ enableHighAccuracy: true });
-				setOrigem({
+				const localizacaoUsuario = {
 					latitude: localizacao.coords.latitude,
 					longitude: localizacao.coords.longitude,
 					latitudeDelta: 0.00922,
 					longitudeDelta: 0.00421,
-				});
+				};
+				setOrigem(localizacaoUsuario);
+				setDestino(localizacaoUsuario);
 			} else {
 				throw new Error("Localização não fornecida");
 			}
 		})();
 	}, []);
 
+	const exibirMarker = () => {
+		return console.log("Logica de mostrar a rota do local aqui");
+	};
 	return (
-		<SafeAreaView>
-			<Text>Inicio</Text>
+		<>
+			<Text
+				style={{
+					position: "absolute",
+					zIndex: 3,
+					alignSelf: "center",
+					textAlign: "center",
+					top: "10%",
+					borderRadius: 30,
+					width: 250,
+					height: 50,
+					backgroundColor: "white",
+				}}
+			>
+				Componente de Saudações aqui
+			</Text>
 			<MapView
-				style={styles.map}
+				style={{
+					width: "100%",
+					height: "100%",
+				}}
 				initialRegion={origem}
 				showsUserLocation={true}
 				loadingEnabled={true}
-			></MapView>
-		</SafeAreaView>
+			>
+				{destino && (
+					<Marker
+						coordinate={{
+							latitude: destino.latitude,
+							longitude: destino.longitude,
+						}}
+						title="Clinica veterinária"
+						description="Bla bla bla"
+						onPress={exibirMarker}
+					>
+						<Image
+							source={require("../../../assets/img/marker/marker-clinica.png")}
+							style={{ width: 40, height: 40 }}
+						/>
+					</Marker>
+				)}
+			</MapView>
+		</>
 	);
 };
 
-const styles = StyleSheet.create({
-	map: {
-		width: "100%",
-		height: "100%",
-	},
-});
 export default Inicio;
