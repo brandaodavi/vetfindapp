@@ -70,30 +70,6 @@ export default function TabRoutes() {
 				},
 			}}
 		>
-			{/* <Tab.Screen
-				name="Login"
-				component={Login}
-				options={{
-					tabBarIcon: ({ size, focused }) => (
-						focused
-							? (corIcone = tema.cores.temaCiano.ciano)
-							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="map-marker" color={corIcone} size={size} />)
-					),
-				}}
-			/>
-			<Tab.Screen
-				name="Cadastro"
-				component={Cadastro}
-				options={{
-					tabBarIcon: ({ size, focused }) => (
-						focused
-							? (corIcone = tema.cores.temaCiano.ciano)
-							: (corIcone = tema.cores.temaNeutro.branco),
-						(<FontAwesome name="map" color={corIcone} size={size} />)
-					),
-				}}
-			/> */}
 			<Tab.Screen
 				name="Inicio"
 				component={iconeInicio.component}
