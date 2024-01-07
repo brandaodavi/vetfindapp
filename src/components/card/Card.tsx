@@ -1,7 +1,7 @@
 import { FontAwesome5 } from "@expo/vector-icons";
 import { TouchableOpacityProps } from "react-native";
 
-import { tema, Text } from "../";
+import { Text } from "../";
 import { CardContainer } from "./cardStyle";
 
 interface CardProps extends TouchableOpacityProps {

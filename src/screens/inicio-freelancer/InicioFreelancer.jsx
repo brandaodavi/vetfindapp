@@ -1,4 +1,4 @@
-import { tema, Text } from "../../components";
+import { tema } from "../../components";
 import Card from "../../components/card/Card";
 
 const InicioFreelancer = () => {

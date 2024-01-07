@@ -5,11 +5,25 @@ import { Image } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { Text } from "../../components";
+// import { Text } from "../../components";
+import { prestadores } from "../../data/prestadores";
+
 const Inicio = () => {
+	const marcarMapa = (objeto) => {
+		if (objeto.tipo === "CLINICA") {
+			return require("../../../assets/img/marker/marker-clinica.png");
+		} else if (objeto.tipo === "CUIDADOR") {
+			return require("../../../assets/img/marker/marker-cuidador.png");
+		} else if (objeto.tipo === "HOTEL") {
+			return require("../../../assets/img/marker/marker-hotel.png");
+		} else if (objeto.tipo === "PETSHOP") {
+			return require("../../../assets/img/marker/marker-petshop.png");
+		} else if (objeto.tipo === "VETERINARIO") {
+			return require("../../../assets/img/marker/marker-veterinario.png");
+		}
+	};
 	const [origem, setOrigem] = useState(null);
 	const [destino, setDestino] = useState(null);
-
 	useEffect(() => {
 		(async function () {
 			const { status } = await Permissions.askAsync(Permissions.LOCATION);
@@ -29,12 +43,12 @@ const Inicio = () => {
 		})();
 	}, []);
 
-	const exibirMarker = () => {
-		return console.log("Logica de mostrar a rota do local aqui");
-	};
+	// const exibirMarker = () => {
+	// 	return console.log("Logica de mostrar a rota do local aqui");
+	// };
 	return (
 		<SafeAreaView>
-			<Text
+			{/* <Text
 				style={{
 					position: "absolute",
 					zIndex: 3,
@@ -48,7 +62,7 @@ const Inicio = () => {
 				}}
 			>
 				Componente de Saudações aqui
-			</Text>
+			</Text> */}
 			{origem && (
 				<MapView
 					style={{
@@ -59,22 +73,18 @@ const Inicio = () => {
 					showsUserLocation={true}
 					loadingEnabled={true}
 				>
-					{destino && (
+					{prestadores.map((prestador, index) => (
 						<Marker
+							key={index}
 							coordinate={{
-								latitude: destino.latitude,
-								longitude: destino.longitude,
+								latitude: prestador.latitude,
+								longitude: prestador.longitude,
 							}}
-							title="Clinica veterinária"
-							description="Bla bla bla"
-							onPress={exibirMarker}
+							title={prestador.nome + " " + prestador.sobrenome}
 						>
-							<Image
-								source={require("../../../assets/img/marker/marker-clinica.png")}
-								style={{ width: 40, height: 40 }}
-							/>
+							<Image source={marcarMapa(prestador)} style={{ width: 40, height: 40 }} />
 						</Marker>
-					)}
+					))}
 				</MapView>
 			)}
 		</SafeAreaView>
