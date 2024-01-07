@@ -6,11 +6,11 @@ import { checarCampos } from "../../functions";
 
 const CadastroProprietario = ({ navigation }) => {
 	const [nome, setNome] = useState(null);
-	const [email, setEmail] = useState(null);
+	const [cpf, setCpf] = useState(null);
 	const [telefone, setTelefone] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(nome, email, telefone) ? navigation.navigate("CadastroEstabelecimento") : "";
+		checarCampos(nome, cpf, telefone) ? navigation.navigate("CadastroEstabelecimento") : "";
 	};
 	return (
 		<Container>
@@ -24,11 +24,11 @@ const CadastroProprietario = ({ navigation }) => {
 					keyboardType="default"
 				/>
 				<Input
-					label="E-mail"
-					placeholder="Insira o seu e-mail"
-					value={email}
-					onChangeText={setEmail}
-					keyboardType="email-address"
+					label="CPF"
+					placeholder="Insira o seu CPF"
+					value={cpf}
+					onChangeText={setCpf}
+					keyboardType="numeric"
 				/>
 				<Input
 					label="Telefone"

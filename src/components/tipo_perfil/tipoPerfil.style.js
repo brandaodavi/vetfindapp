@@ -12,7 +12,7 @@ export const ContainerTipo = styled.TouchableOpacity`
 
 export const ContainerPerfilHeader = styled.View`
 	gap: 10px;
-	margin: 25% auto 25%;
+	margin: 25% auto 20%;
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
