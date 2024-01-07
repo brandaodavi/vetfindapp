@@ -33,7 +33,7 @@ const Inicio = () => {
 		return console.log("Logica de mostrar a rota do local aqui");
 	};
 	return (
-		<>
+		<SafeAreaView>
 			<Text
 				style={{
 					position: "absolute",
@@ -49,33 +49,35 @@ const Inicio = () => {
 			>
 				Componente de Saudações aqui
 			</Text>
-			<MapView
-				style={{
-					width: "100%",
-					height: "100%",
-				}}
-				initialRegion={origem}
-				showsUserLocation={true}
-				loadingEnabled={true}
-			>
-				{destino && (
-					<Marker
-						coordinate={{
-							latitude: destino.latitude,
-							longitude: destino.longitude,
-						}}
-						title="Clinica veterinária"
-						description="Bla bla bla"
-						onPress={exibirMarker}
-					>
-						<Image
-							source={require("../../../assets/img/marker/marker-clinica.png")}
-							style={{ width: 40, height: 40 }}
-						/>
-					</Marker>
-				)}
-			</MapView>
-		</>
+			{origem && (
+				<MapView
+					style={{
+						width: "100%",
+						height: "100%",
+					}}
+					initialRegion={origem}
+					showsUserLocation={true}
+					loadingEnabled={true}
+				>
+					{destino && (
+						<Marker
+							coordinate={{
+								latitude: destino.latitude,
+								longitude: destino.longitude,
+							}}
+							title="Clinica veterinária"
+							description="Bla bla bla"
+							onPress={exibirMarker}
+						>
+							<Image
+								source={require("../../../assets/img/marker/marker-clinica.png")}
+								style={{ width: 40, height: 40 }}
+							/>
+						</Marker>
+					)}
+				</MapView>
+			)}
+		</SafeAreaView>
 	);
 };
 

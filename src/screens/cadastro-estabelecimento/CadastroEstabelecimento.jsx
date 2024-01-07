@@ -1,5 +1,7 @@
+import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
 
+import { tema } from "../../components";
 import { Button, Container, Input, PerfilHeader } from "../../components";
 import { checarCampos } from "../../functions";
 
@@ -15,11 +17,29 @@ const CadastroEstabelecimento = ({ navigation }) => {
 	return (
 		<Container>
 			<PerfilHeader title="Sobre o estabelecimento" icon="store-alt" size={60}></PerfilHeader>
+			<Picker
+				style={{
+					width: 200,
+					backgroundColor: `${tema.cores.temaNeutro.branco}`,
+					position: "absolute",
+					top: "38%",
+					left: "23%",
+					zIndex: 1,
+					color: `${tema.cores.temaVerde.verdePrincipal}`,
+				}}
+				selectedValue={tipo}
+				onValueChange={(itemValue) => setTipo(itemValue)}
+			>
+				<Picker.Item label="Clínica Veterinária" value="CLINICA VETERINARIA" />
+				<Picker.Item label="Pet Shop" value="PET SHOP" />
+				<Picker.Item label="Hotel Animal" value="HOTEL ANIMAL" />
+			</Picker>
 			<Input
 				label="Tipo"
 				placeholder="Insira o tipo do estabelecimento"
 				value={tipo}
 				onChangeText={setTipo}
+				editable={false}
 				keyboardType="default"
 			/>
 			<Input
@@ -27,14 +47,14 @@ const CadastroEstabelecimento = ({ navigation }) => {
 				placeholder="Insira o horário de abertura"
 				value={abertura}
 				onChangeText={setAbertura}
-				keyboardType="default"
+				keyboardType="numeric"
 			/>
 			<Input
 				label="Encerramento"
 				placeholder="Insira horário de encerramento"
 				value={encerramento}
 				onChangeText={setEncerramento}
-				keyboardType="default"
+				keyboardType="numeric"
 			/>
 			<Button margin="35% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
