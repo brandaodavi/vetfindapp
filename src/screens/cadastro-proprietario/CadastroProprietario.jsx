@@ -10,7 +10,7 @@ const CadastroProprietario = ({ navigation }) => {
 	const [telefone, setTelefone] = useState(null);
 
 	const encaminharCampos = () => {
-		checarCampos(nome, cpf, telefone) ? navigation.navigate("CadastroEstabelecimento") : "";
+		checarCampos(nome, cpf, telefone) ? navigation.navigate("CadastroProprietarioFinal") : "";
 	};
 	return (
 		<Container>

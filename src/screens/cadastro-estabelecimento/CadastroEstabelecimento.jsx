@@ -3,7 +3,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { tema } from "../../components";
-import { Button, Container, Input, PerfilHeader } from "../../components";
+import { Button, Container, Input, Text, textTypes } from "../../components";
 import { checarCampos } from "../../functions";
 
 const CadastroEstabelecimento = ({ navigation }) => {
@@ -11,21 +11,31 @@ const CadastroEstabelecimento = ({ navigation }) => {
 	const [cnpj, setCnpj] = useState(undefined);
 	const [abertura, setAbertura] = useState(undefined);
 	const [encerramento, setEncerramento] = useState(undefined);
+	const [nome, setNome] = useState(undefined);
 	const encaminharCampos = () => {
-		checarCampos(tipo, abertura, encerramento)
+		checarCampos(nome, tipo, abertura, encerramento)
 			? navigation.navigate("CadastroEstabelecimento2")
 			: "";
 	};
 	return (
 		<Container>
 			<KeyboardAvoidingView behavior="position">
-				<PerfilHeader title="Sobre o estabelecimento" icon="store-alt" size={60}></PerfilHeader>
+				<Text margin="24% auto 15% auto" type={textTypes.TITLE_REGULAR}>
+					Sobre o estabelecimento
+				</Text>
+				<Input
+					label="Nome"
+					placeholder="Insira o nome do estabelecimento"
+					value={nome}
+					onChangeText={setNome}
+					keyboardType="default"
+				/>
 				<Picker
 					style={{
 						width: 200,
 						backgroundColor: "transparent",
 						position: "absolute",
-						top: "43.5%",
+						top: "41%",
 						left: "23%",
 						zIndex: 1,
 						color: `${tema.cores.temaVerde.verdePrincipal}`,
@@ -60,8 +70,8 @@ const CadastroEstabelecimento = ({ navigation }) => {
 					onChangeText={setEncerramento}
 					keyboardType="numeric"
 				/>
+				<Button margin="10% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 			</KeyboardAvoidingView>
-			<Button margin="20% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

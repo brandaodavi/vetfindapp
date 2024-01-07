@@ -1,21 +1,25 @@
 import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
-import { Button, Container, Input, PerfilHeader } from "../../components";
+import { Button, Container, Input, Text, textTypes } from "../../components";
 import { checarCampos } from "../../functions";
 
 const CadastroEstabelecimento2 = ({ navigation }) => {
 	const encaminharCampos = () => {
-		checarCampos(cep, logradouro, numero) ? navigation.navigate("CadastroEstabelecimento2") : "";
+		checarCampos(cep, logradouro, numero, bairro)
+			? navigation.navigate("CadastroEstabelecimento3")
+			: "";
 	};
 	const [cep, setCep] = useState(undefined);
 	const [logradouro, setLogradouro] = useState(undefined);
-	const [complemento, setComplemento] = useState(undefined);
+	const [bairro, setBairro] = useState(undefined);
 	const [numero, setNumero] = useState(undefined);
 	return (
 		<Container>
 			<KeyboardAvoidingView behavior="position">
-				<PerfilHeader title="Sobre o estabelecimento" icon="store-alt" size={60} />
+				<Text margin="24% auto 20% auto" type={textTypes.TITLE_REGULAR}>
+					Sobre o estabelecimento
+				</Text>
 				<Input
 					label="CEP"
 					placeholder="Insira o CEP"
@@ -31,21 +35,21 @@ const CadastroEstabelecimento2 = ({ navigation }) => {
 					keyboardType="default"
 				/>
 				<Input
-					label="Complemento"
-					placeholder="Insira o complemento"
-					value={complemento}
-					onChangeText={setComplemento}
-					keyboardType="default"
-				/>
-				<Input
 					label="Número"
 					placeholder="Insira o número"
 					value={numero}
 					onChangeText={setNumero}
 					keyboardType="numeric"
 				/>
+				<Input
+					label="Bairro"
+					placeholder="Insira o bairro"
+					value={bairro}
+					onChangeText={setBairro}
+					keyboardType="default"
+				/>
 			</KeyboardAvoidingView>
-			<Button margin="20% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
+			<Button margin="25% auto 0 auto" title="Continuar" onPress={encaminharCampos} />
 		</Container>
 	);
 };

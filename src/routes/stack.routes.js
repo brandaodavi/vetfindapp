@@ -9,8 +9,10 @@ import {
 	CadastroCuidadorFinal,
 	CadastroEstabelecimento,
 	CadastroEstabelecimento2,
+	CadastroEstabelecimento3,
 	CadastroFreelancer,
 	CadastroProprietario,
+	CadastroProprietarioFinal,
 	CadastroVeterinario,
 	CadastroVeterinarioFinal,
 	Login,
@@ -76,6 +78,17 @@ export default function StackRoutes() {
 				}}
 			/>
 			<Stack.Screen
+				name="CadastroProprietarioFinal"
+				component={CadastroProprietarioFinal}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
 				name="CadastroEstabelecimento"
 				component={CadastroEstabelecimento}
 				options={{
@@ -93,6 +106,17 @@ export default function StackRoutes() {
 					headerTitle: "",
 					headerStyle: {
 						backgroundColor: "#FFFFFF",
+					},
+					headerTransparent: true,
+				}}
+			/>
+			<Stack.Screen
+				name="CadastroEstabelecimento3"
+				component={CadastroEstabelecimento3}
+				options={{
+					headerTitle: "",
+					headerStyle: {
+						backgroundColor: "#FFF",
 					},
 					headerTransparent: true,
 				}}
