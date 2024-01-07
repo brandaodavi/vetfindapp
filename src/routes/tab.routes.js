@@ -4,6 +4,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { tema } from "../components";
 import {
 	Inicio,
+	InicioFreelancer,
+	InicioProprietario,
 	Menu,
 	Perfil,
 	PerfilFreelancer,
@@ -16,19 +18,23 @@ const Tab = createBottomTabNavigator();
 export default function TabRoutes() {
 	let corIcone;
 	let tipoUsuario = "CLIENTE";
+
 	const iconeInicio = {
 		component: Inicio,
 	};
+
 	const segundoIcone = {
 		name: "Pesquisa",
 		icone: "search",
 		component: Pesquisa,
 	};
+
 	const iconePerfil = {
 		name: "Perfil",
 		icone: "user-circle",
 		component: Perfil,
 	};
+
 	const iconeMenu = {
 		component: Menu,
 	};
@@ -38,18 +44,22 @@ export default function TabRoutes() {
 		segundoIcone.icone = "plus";
 		iconePerfil.icone = "store-alt";
 		iconePerfil.component = PerfilProprietario;
+		iconeInicio.component = InicioProprietario;
 	} else if (tipoUsuario === "VETERINARIO") {
 		segundoIcone.name = "Publicar";
 		segundoIcone.icone = "plus";
 		iconePerfil.icone = "user-md";
 		iconePerfil.component = PerfilFreelancer;
+		iconeInicio.component = InicioFreelancer;
 	} else if (tipoUsuario === "CLIENTE") {
 		segundoIcone.icone = "search";
 	} else if (tipoUsuario === "CUIDADOR") {
 		segundoIcone.name = "Publicar";
 		segundoIcone.icone = "plus";
 		iconePerfil.icone = "user";
+		iconeInicio.component = InicioFreelancer;
 	}
+
 	return (
 		<Tab.Navigator
 			screenOptions={{

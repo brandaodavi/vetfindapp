@@ -12,6 +12,8 @@ import CadastroProprietarioFinal from "./cadastro-proprietario/CadastroProprieta
 import CadastroVeterinario from "./cadastro-veterinario/CadastroVeterinario";
 import CadastroVeterinarioFinal from "./cadastro-veterinario/CadastroVeterinarioFinal";
 import Inicio from "./inicio-cliente/Inicio";
+import InicioFreelancer from "./inicio-freelancer/InicioFreelancer";
+import InicioProprietario from "./inicio-proprietario/InicioProprietario";
 import Login from "./login/Login";
 import Menu from "./menu/Menu";
 import Perfil from "./perfil-cliente/Perfil";
@@ -34,6 +36,8 @@ export {
 	CadastroVeterinario,
 	CadastroVeterinarioFinal,
 	Inicio,
+	InicioFreelancer,
+	InicioProprietario,
 	Login,
 	Menu,
 	Perfil,

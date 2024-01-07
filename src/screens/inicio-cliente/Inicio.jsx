@@ -1,6 +1,6 @@
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Image } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -12,7 +12,7 @@ const Inicio = () => {
 
 	useEffect(() => {
 		(async function () {
-			const { status, permissions } = await Permissions.askAsync(Permissions.LOCATION);
+			const { status } = await Permissions.askAsync(Permissions.LOCATION);
 			if (status === "granted") {
 				let localizacao = await Location.getCurrentPositionAsync({ enableHighAccuracy: true });
 				const localizacaoUsuario = {
