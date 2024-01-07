@@ -5,6 +5,7 @@ import { ButtonSecondary } from "./botao/button.style";
 import { ButtonTerciary } from "./botao/button.style";
 import { ButtonDisabled } from "./botao/button.style";
 import { ActivityButton } from "./botao/button.style";
+import Card from "./card/Card";
 import Input from "./input/Input";
 import Text from "./text/Text";
 import { textTypes } from "./text/textType";
@@ -20,6 +21,7 @@ export {
 	ButtonPrimary,
 	ButtonSecondary,
 	ButtonTerciary,
+	Card,
 	Container,
 	ContainerPerfilHeader,
 	ContainerTipo,

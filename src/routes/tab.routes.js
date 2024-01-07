@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 export default function TabRoutes() {
 	let corIcone;
-	let tipoUsuario = "CLIENTE";
+	let tipoUsuario = "PROPRIETARIO";
 
 	const iconeInicio = {
 		component: Inicio,
