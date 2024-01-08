@@ -5,7 +5,7 @@ import { Image } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { Text } from "../../components";
+// import { Text } from "../../components";
 import { prestadores } from "../../data/prestadores";
 
 const Inicio = () => {
