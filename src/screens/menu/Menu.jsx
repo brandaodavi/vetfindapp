@@ -1,19 +1,17 @@
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { Text } from "../../components";
+import { Card } from "../../components";
 
 const Menu = () => {
 	const navigation = useNavigation();
 	return (
 		<SafeAreaView>
-			<Text
+			<Card
 				onPress={() => {
 					navigation.navigate("Login");
 				}}
-			>
-				Menu
-			</Text>
+			></Card>
 		</SafeAreaView>
 	);
 };

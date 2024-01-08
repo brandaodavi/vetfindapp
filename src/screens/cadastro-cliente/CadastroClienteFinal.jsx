@@ -2,6 +2,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, Text, textTypes } from "../../components";
+import { clientes } from "../../data/clientes";
 import { checarCampos, checarCamposIguais } from "../../functions";
 
 const CadastroClienteFinal = ({ navigation }) => {
@@ -11,6 +12,15 @@ const CadastroClienteFinal = ({ navigation }) => {
 	const [senhaConfirmada, setSenhaConfirmada] = useState(null);
 
 	const encaminharCampos = () => {
+		clientes.push({
+			id: "",
+			nome: "",
+			sobrenome: "",
+			email: email,
+			senha: senha,
+			ddd: "",
+			telefone: "",
+		});
 		checarCampos(email, emailConfirmado, senha, senhaConfirmada) &&
 		checarCamposIguais(email, emailConfirmado) &&
 		checarCamposIguais(senha, senhaConfirmada)

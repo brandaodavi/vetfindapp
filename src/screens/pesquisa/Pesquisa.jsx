@@ -5,7 +5,7 @@ import { Text } from "../../components";
 const Pesquisa = () => {
 	return (
 		<SafeAreaView>
-			<Text>Pesquisa</Text>
+			<Text>Em desenvolvimento</Text>
 		</SafeAreaView>
 	);
 };

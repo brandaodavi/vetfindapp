@@ -15,9 +15,9 @@ import {
 
 const Tab = createBottomTabNavigator();
 
-export default function TabRoutes() {
+export default function TabRoutes({ route }) {
 	let corIcone;
-	let tipoUsuario = "CLIENTE";
+	let tipoUsuario = route.params?.tipoUsuario || "CLIENTE";
 
 	const iconeInicio = {
 		component: Inicio,
@@ -83,6 +83,7 @@ export default function TabRoutes() {
 			<Tab.Screen
 				name="Inicio"
 				component={iconeInicio.component}
+				initialParams={{ tipoUsuario: tipoUsuario }}
 				options={{
 					tabBarIcon: ({ focused }) => (
 						focused

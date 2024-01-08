@@ -5,7 +5,7 @@ import { Text } from "../../components";
 const PerfilFreelancer = () => {
 	return (
 		<SafeAreaView>
-			<Text>Perfil Veterinario</Text>
+			<Text>Em desenvolvimento</Text>
 		</SafeAreaView>
 	);
 };

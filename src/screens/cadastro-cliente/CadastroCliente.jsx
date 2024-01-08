@@ -3,12 +3,10 @@ import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Container, Input, PerfilHeader } from "../../components";
 import { checarCampos } from "../../functions";
-
 const CadastroCliente = ({ navigation }) => {
 	const [nomeCliente, setNomeCliente] = useState(null);
 	const [emailCliente, setEmailCliente] = useState(null);
 	const [cepCliente, setCepCliente] = useState(null);
-
 	const encaminharCampos = () => {
 		checarCampos(nomeCliente, emailCliente, cepCliente)
 			? navigation.navigate("CadastroClienteFinal")

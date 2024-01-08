@@ -4,15 +4,17 @@ import { Image } from "react-native";
 import { KeyboardAvoidingView } from "react-native";
 
 import { Button, Input, tema, Text, textTypes } from "../../components/index";
+import { usuarios } from "../../data/usuarios";
 import { Container } from "./login.style";
 
 const Login = ({ navigation }) => {
 	const [usuario, setUsuario] = useState(null);
 	const [senha, setSenha] = useState(null);
 
-	const autorizarLogin = () => {
-		if (senha === "1234") {
-			navigation.navigate("TabBar");
+	const autorizarLogin = (email, senha) => {
+		const usuario = usuarios.find((usuario) => usuario.email === email);
+		if (usuario && usuario.senha === senha) {
+			navigation.navigate("TabBar", { tipoUsuario: usuario.tipo });
 			setSenha(null);
 			setUsuario(null);
 		} else {
@@ -50,7 +52,7 @@ const Login = ({ navigation }) => {
 				<Text margin="auto" onPress={() => console.log(senha)}>
 					Esqueci a minha senha
 				</Text>
-				<Button margin="10% auto" title="Entrar" onPress={autorizarLogin} />
+				<Button margin="10% auto" title="Entrar" onPress={() => autorizarLogin(usuario, senha)} />
 			</KeyboardAvoidingView>
 			<Text margin="30% auto 1% auto" type={textTypes.SMALL_BOLD}>
 				Não possui conta no VetFind?

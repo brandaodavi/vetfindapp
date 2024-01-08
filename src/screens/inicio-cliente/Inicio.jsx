@@ -5,7 +5,7 @@ import { Image } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-// import { Text } from "../../components";
+import { Text } from "../../components";
 import { prestadores } from "../../data/prestadores";
 
 const Inicio = () => {
@@ -22,8 +22,10 @@ const Inicio = () => {
 			return require("../../../assets/img/marker/marker-veterinario.png");
 		}
 	};
+
 	const [origem, setOrigem] = useState(null);
-	const [destino, setDestino] = useState(null);
+	// const [destino, setDestino] = useState(null);
+
 	useEffect(() => {
 		(async function () {
 			const { status } = await Permissions.askAsync(Permissions.LOCATION);
@@ -36,7 +38,7 @@ const Inicio = () => {
 					longitudeDelta: 0.00421,
 				};
 				setOrigem(localizacaoUsuario);
-				setDestino(localizacaoUsuario);
+				// setDestino(localizacaoUsuario);
 			} else {
 				throw new Error("Localização não fornecida");
 			}

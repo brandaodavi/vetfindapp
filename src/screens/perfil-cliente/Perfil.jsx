@@ -4,7 +4,7 @@ import { Text } from "../../components";
 const Perfil = () => {
 	return (
 		<SafeAreaView>
-			<Text>Perfil</Text>
+			<Text>Em desenvolvimento</Text>
 		</SafeAreaView>
 	);
 };
